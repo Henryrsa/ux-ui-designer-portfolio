@@ -120,7 +120,8 @@ if (navbar) {
 
 if (floatingActions) {
     const toggleFloating = () => {
-        if (window.scrollY > 200) {
+        const isMobile = window.innerWidth < 768;
+        if (isMobile || window.scrollY > 200) {
             floatingActions.classList.add('visible');
         } else {
             floatingActions.classList.remove('visible');
@@ -128,6 +129,7 @@ if (floatingActions) {
     };
 
     window.addEventListener('scroll', toggleFloating);
+    window.addEventListener('resize', toggleFloating);
     toggleFloating();
 }
 
@@ -197,6 +199,13 @@ if (goblin && !prefersReducedMotion) {
     });
 
     updateGoblin();
+}
+
+if (goblin && prefersReducedMotion) {
+    goblin.style.right = '24px';
+    goblin.style.bottom = '24px';
+    goblin.style.left = 'auto';
+    goblin.style.top = 'auto';
 }
 
 // Smooth scroll for anchor links

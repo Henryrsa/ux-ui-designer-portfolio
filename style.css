@@ -222,6 +222,7 @@ body {
 
 .btn-primary-custom,
 .btn-secondary-custom,
+.btn-whatsapp,
 .btn-tertiary-custom {
     padding: 1rem 2rem;
     border-radius: 50px;
@@ -233,18 +234,7 @@ body {
 
 .btn-primary-custom:focus-visible,
 .btn-secondary-custom:focus-visible,
-.btn-tertiary-custom:focus-visible,
-.project-link:focus-visible,
-.poster-actions a:focus-visible,
-.social-link:focus-visible,
-.footer-social a:focus-visible,
-.filter-btn:focus-visible {
-    outline: 2px solid rgba(26, 26, 46, 0.4);
-    outline-offset: 4px;
-}
-
-.btn-primary-custom:focus-visible,
-.btn-secondary-custom:focus-visible,
+.btn-whatsapp:focus-visible,
 .btn-tertiary-custom:focus-visible,
 .project-link:focus-visible,
 .poster-actions a:focus-visible,
@@ -275,6 +265,21 @@ body {
 .btn-secondary-custom:hover {
     background: var(--primary);
     color: white;
+}
+
+.btn-whatsapp {
+    background: #25D366;
+    color: white;
+    border: 2px solid #25D366;
+    box-shadow: 0 5px 20px rgba(37, 211, 102, 0.35);
+}
+
+.btn-whatsapp:hover {
+    background: #1ebe5d;
+    border-color: #1ebe5d;
+    color: white;
+    transform: translateY(-3px);
+    box-shadow: 0 10px 30px rgba(37, 211, 102, 0.4);
 }
 
 .btn-tertiary-custom {
@@ -1309,6 +1314,12 @@ section {
 
     .project-highlights {
         grid-template-columns: 1fr;
+    }
+
+    .floating-actions {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
     }
 }
 
