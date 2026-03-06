@@ -1264,6 +1264,10 @@ section {
     section {
         padding: 4rem 0;
     }
+
+    .hero-section .col-lg-7 {
+        margin-top: 1.5rem;
+    }
     
     .section-title {
         font-size: 1.75rem;
