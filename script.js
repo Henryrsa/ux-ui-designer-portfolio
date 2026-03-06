@@ -121,7 +121,7 @@ if (navbar) {
 if (floatingActions) {
     const toggleFloating = () => {
         const isMobile = window.innerWidth < 768;
-        if (isMobile || window.scrollY > 200) {
+        if (isMobile || window.scrollY > 120) {
             floatingActions.classList.add('visible');
         } else {
             floatingActions.classList.remove('visible');
@@ -134,7 +134,7 @@ if (floatingActions) {
 }
 
 // Goblin follow and attack
-if (goblin && !prefersReducedMotion) {
+if (goblin && !prefersReducedMotion && window.innerWidth >= 768) {
     let targetX = window.innerWidth - 120;
     let targetY = window.innerHeight - 140;
     let currentX = targetX;

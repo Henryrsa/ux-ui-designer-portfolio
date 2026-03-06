@@ -1335,7 +1335,19 @@ section {
     transform: translateY(10px);
     pointer-events: none;
     transition: all 0.3s ease;
-    z-index: 999;
+    z-index: 1002;
+}
+
+@media (max-width: 768px) {
+    .floating-actions {
+        opacity: 1;
+        transform: none;
+        pointer-events: auto;
+    }
+
+    .goblin {
+        display: none;
+    }
 }
 
 .floating-actions.visible {
