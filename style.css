@@ -440,48 +440,37 @@ section {
 .about-image-wrapper {
     position: relative;
     margin-bottom: 2rem;
-}
-
-.about-shape {
-    position: absolute;
-    top: -14px;
-    left: -14px;
-    width: calc(100% + 28px);
-    height: calc(100% + 28px);
-    background: var(--gradient-2);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    animation: morph 8s ease-in-out infinite;
-    z-index: 0;
-    opacity: 0.7;
-}
-
-@keyframes morph {
-    0%, 100% {
-        border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    }
-    50% {
-        border-radius: 70% 30% 30% 70% / 70% 70% 30% 30%;
-    }
-}
-
-.about-image-placeholder {
-    position: relative;
-    width: 100%;
-    padding-bottom: 100%;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: linear-gradient(135deg, rgba(126, 232, 250, 0.2) 0%, rgba(199, 146, 234, 0.2) 100%);
-    border-radius: 30% 70% 70% 30% / 30% 30% 70% 70%;
-    overflow: hidden;
-    z-index: 1;
 }
 
-.about-image-placeholder i {
-    position: absolute;
-    font-size: 5rem;
+.about-panel {
+    width: min(420px, 90%);
+    aspect-ratio: 4 / 5;
+    border-radius: 28px;
+    background: linear-gradient(135deg, rgba(126, 232, 250, 0.18) 0%, rgba(199, 146, 234, 0.18) 100%);
+    box-shadow: var(--shadow);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    border: 1px solid rgba(199, 146, 234, 0.2);
+}
+
+.about-panel i {
+    font-size: 3.5rem;
     color: var(--primary);
-    opacity: 0.5;
+    opacity: 0.85;
+}
+
+.about-panel span {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+    letter-spacing: 0.5px;
 }
 
 .about-content .section-title {
@@ -746,25 +735,49 @@ section {
 
 .project-image {
     height: 200px;
-    background: linear-gradient(135deg, var(--accent) 0%, var(--secondary) 100%);
+    background: #f4f5f7;
+    border: 1px solid rgba(26, 26, 46, 0.08);
     display: flex;
     align-items: center;
     justify-content: center;
     position: relative;
     overflow: hidden;
+    box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.6);
+}
+
+.project-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--gradient-2);
+    opacity: 0.8;
 }
 
 .project-placeholder {
     display: flex;
     flex-direction: column;
     align-items: center;
-    gap: 0.5rem;
-    color: white;
+    gap: 0.75rem;
+    color: var(--text);
     z-index: 1;
+    text-align: center;
 }
 
-.project-placeholder i {
-    font-size: 3rem;
+.project-icon {
+    width: 56px;
+    height: 56px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.project-icon i {
+    font-size: 2.4rem;
+    line-height: 1;
 }
 
 .project-placeholder span {
@@ -772,6 +785,7 @@ section {
     text-transform: uppercase;
     letter-spacing: 2px;
     font-size: 0.75rem;
+    color: var(--text-light);
 }
 
 .project-card.coming-soon .project-image {
@@ -1264,11 +1278,9 @@ section {
         transform: none;
     }
 
-    .goblin {
-        width: 70px;
-        height: 70px;
-        left: 0;
-        top: 0;
+    .cursor-orb {
+        width: 110px;
+        height: 110px;
     }
 }
 
@@ -1344,10 +1356,6 @@ section {
         transform: none;
         pointer-events: auto;
     }
-
-    .goblin {
-        display: none;
-    }
 }
 
 .floating-actions.visible {
@@ -1371,6 +1379,20 @@ section {
     transition: all 0.3s ease;
 }
 
+.floating-cycle {
+    position: relative;
+    animation: pulse 2.8s ease-in-out infinite;
+}
+
+.floating-cycle .cycle-icon {
+    transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.floating-cycle.cycle-fade .cycle-icon {
+    opacity: 0;
+    transform: translateY(6px);
+}
+
 .floating-btn:hover {
     background: var(--gradient-1);
     color: white;
@@ -1382,167 +1404,21 @@ section {
     outline-offset: 4px;
 }
 
-/* Goblin */
-.goblin {
+/* Cursor Orb */
+.cursor-orb {
     position: fixed;
-    width: 90px;
-    height: 90px;
+    width: 140px;
+    height: 140px;
     left: 0;
     top: 0;
+    border-radius: 50%;
     pointer-events: none;
     z-index: 998;
+    background: radial-gradient(circle at 30% 30%, rgba(255, 107, 157, 0.35), rgba(126, 232, 250, 0.25) 55%, rgba(255, 255, 255, 0) 70%);
+    filter: blur(6px);
+    opacity: 0.8;
     transform: translate3d(0, 0, 0);
-    transform-origin: center;
-}
-
-.goblin-shadow {
-    position: absolute;
-    width: 60px;
-    height: 16px;
-    left: 15px;
-    bottom: 6px;
-    background: rgba(26, 26, 46, 0.2);
-    border-radius: 50%;
-    filter: blur(4px);
-}
-
-.goblin-body {
-    position: absolute;
-    width: 56px;
-    height: 42px;
-    left: 18px;
-    bottom: 18px;
-    background: #6bbf4e;
-    border-radius: 18px 18px 16px 16px;
-    box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.12);
-    animation: goblin-float 2.6s ease-in-out infinite;
-}
-
-.goblin-head {
-    position: absolute;
-    width: 54px;
-    height: 50px;
-    left: 18px;
-    bottom: 46px;
-    background: #7ed85d;
-    border-radius: 20px 20px 18px 18px;
-    box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.12);
-    animation: goblin-float 2.6s ease-in-out infinite;
-}
-
-.goblin-head::before,
-.goblin-head::after {
-    content: '';
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    background: #7ed85d;
-    border-radius: 4px;
-    top: 8px;
-}
-
-.goblin-head::before {
-    left: -6px;
-    transform: rotate(-10deg);
-}
-
-.goblin-head::after {
-    right: -6px;
-    transform: rotate(10deg);
-}
-
-.goblin-eye {
-    position: absolute;
-    width: 8px;
-    height: 12px;
-    background: white;
-    border-radius: 50%;
-    bottom: 70px;
-}
-
-.goblin-eye::after {
-    content: '';
-    position: absolute;
-    width: 4px;
-    height: 4px;
-    background: #1a1a2e;
-    border-radius: 50%;
-    top: 4px;
-    left: 2px;
-}
-
-.goblin-eye-left {
-    left: 32px;
-}
-
-.goblin-eye-right {
-    right: 32px;
-}
-
-.goblin-arm {
-    position: absolute;
-    width: 22px;
-    height: 32px;
-    right: 10px;
-    bottom: 34px;
-    background: #5aa93f;
-    border-radius: 12px;
-    transform-origin: top left;
-}
-
-.goblin-nails {
-    position: absolute;
-    width: 30px;
-    height: 6px;
-    right: -6px;
-    bottom: 44px;
-    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
-    border-radius: 999px;
-    opacity: 0;
-}
-
-.goblin.attack .goblin-arm {
-    animation: goblin-swipe 0.35s ease;
-}
-
-.goblin.attack .goblin-nails {
-    animation: goblin-slash 0.35s ease;
-}
-
-@keyframes goblin-float {
-    0%, 100% {
-        transform: translateY(0);
-    }
-    50% {
-        transform: translateY(-6px);
-    }
-}
-
-@keyframes goblin-swipe {
-    0% {
-        transform: rotate(0deg);
-    }
-    40% {
-        transform: rotate(-55deg);
-    }
-    100% {
-        transform: rotate(0deg);
-    }
-}
-
-@keyframes goblin-slash {
-    0% {
-        opacity: 0;
-        transform: translateX(0);
-    }
-    30% {
-        opacity: 1;
-        transform: translateX(6px);
-    }
-    100% {
-        opacity: 0;
-        transform: translateX(12px);
-    }
+    transition: opacity 0.3s ease;
 }
 
 @media (prefers-reduced-motion: reduce) {
@@ -1565,17 +1441,11 @@ section {
         transform: none;
     }
 
-    .goblin {
-        animation: none;
-        right: 24px;
-        bottom: 24px;
-        left: auto;
-        top: auto;
-        transform: none;
+    .cursor-orb {
+        display: none;
     }
 
-    .goblin-body,
-    .goblin-head {
+    .floating-cycle {
         animation: none;
     }
 }
