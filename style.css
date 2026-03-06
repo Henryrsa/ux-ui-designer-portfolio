@@ -1258,11 +1258,23 @@ section {
         bottom: 24px;
         transform: none;
     }
+
+    .goblin {
+        width: 70px;
+        height: 70px;
+        left: 0;
+        top: 0;
+    }
 }
 
 @media (max-width: 576px) {
     section {
         padding: 4rem 0;
+        scroll-margin-top: 90px;
+    }
+
+    .hero-section {
+        padding-top: 7.5rem;
     }
 
     .hero-section .col-lg-7 {
@@ -1300,6 +1312,216 @@ section {
     }
 }
 
+/* Floating Actions */
+.floating-actions {
+    position: fixed;
+    right: 1.5rem;
+    bottom: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    opacity: 0;
+    transform: translateY(10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+    z-index: 999;
+}
+
+.floating-actions.visible {
+    opacity: 1;
+    transform: translateY(0);
+    pointer-events: auto;
+}
+
+.floating-btn {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: white;
+    color: var(--text);
+    box-shadow: var(--shadow);
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+.floating-btn:hover {
+    background: var(--gradient-1);
+    color: white;
+    transform: translateY(-2px);
+}
+
+.floating-btn:focus-visible {
+    outline: 2px solid rgba(26, 26, 46, 0.4);
+    outline-offset: 4px;
+}
+
+/* Goblin */
+.goblin {
+    position: fixed;
+    width: 90px;
+    height: 90px;
+    left: 0;
+    top: 0;
+    pointer-events: none;
+    z-index: 998;
+    transform: translate3d(0, 0, 0);
+    transform-origin: center;
+}
+
+.goblin-shadow {
+    position: absolute;
+    width: 60px;
+    height: 16px;
+    left: 15px;
+    bottom: 6px;
+    background: rgba(26, 26, 46, 0.2);
+    border-radius: 50%;
+    filter: blur(4px);
+}
+
+.goblin-body {
+    position: absolute;
+    width: 56px;
+    height: 42px;
+    left: 18px;
+    bottom: 18px;
+    background: #6bbf4e;
+    border-radius: 18px 18px 16px 16px;
+    box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.12);
+    animation: goblin-float 2.6s ease-in-out infinite;
+}
+
+.goblin-head {
+    position: absolute;
+    width: 54px;
+    height: 50px;
+    left: 18px;
+    bottom: 46px;
+    background: #7ed85d;
+    border-radius: 20px 20px 18px 18px;
+    box-shadow: inset 0 -6px 0 rgba(0, 0, 0, 0.12);
+    animation: goblin-float 2.6s ease-in-out infinite;
+}
+
+.goblin-head::before,
+.goblin-head::after {
+    content: '';
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    background: #7ed85d;
+    border-radius: 4px;
+    top: 8px;
+}
+
+.goblin-head::before {
+    left: -6px;
+    transform: rotate(-10deg);
+}
+
+.goblin-head::after {
+    right: -6px;
+    transform: rotate(10deg);
+}
+
+.goblin-eye {
+    position: absolute;
+    width: 8px;
+    height: 12px;
+    background: white;
+    border-radius: 50%;
+    bottom: 70px;
+}
+
+.goblin-eye::after {
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    background: #1a1a2e;
+    border-radius: 50%;
+    top: 4px;
+    left: 2px;
+}
+
+.goblin-eye-left {
+    left: 32px;
+}
+
+.goblin-eye-right {
+    right: 32px;
+}
+
+.goblin-arm {
+    position: absolute;
+    width: 22px;
+    height: 32px;
+    right: 10px;
+    bottom: 34px;
+    background: #5aa93f;
+    border-radius: 12px;
+    transform-origin: top left;
+}
+
+.goblin-nails {
+    position: absolute;
+    width: 30px;
+    height: 6px;
+    right: -6px;
+    bottom: 44px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.85), rgba(255, 255, 255, 0));
+    border-radius: 999px;
+    opacity: 0;
+}
+
+.goblin.attack .goblin-arm {
+    animation: goblin-swipe 0.35s ease;
+}
+
+.goblin.attack .goblin-nails {
+    animation: goblin-slash 0.35s ease;
+}
+
+@keyframes goblin-float {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
+}
+
+@keyframes goblin-swipe {
+    0% {
+        transform: rotate(0deg);
+    }
+    40% {
+        transform: rotate(-55deg);
+    }
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+@keyframes goblin-slash {
+    0% {
+        opacity: 0;
+        transform: translateX(0);
+    }
+    30% {
+        opacity: 1;
+        transform: translateX(6px);
+    }
+    100% {
+        opacity: 0;
+        transform: translateX(12px);
+    }
+}
+
 @media (prefers-reduced-motion: reduce) {
     html {
         scroll-behavior: auto;
@@ -1318,6 +1540,20 @@ section {
     .reveal {
         opacity: 1;
         transform: none;
+    }
+
+    .goblin {
+        animation: none;
+        right: 24px;
+        bottom: 24px;
+        left: auto;
+        top: auto;
+        transform: none;
+    }
+
+    .goblin-body,
+    .goblin-head {
+        animation: none;
     }
 }
 

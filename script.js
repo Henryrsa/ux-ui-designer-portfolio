@@ -105,6 +105,8 @@ if (canvas && ctx && !prefersReducedMotion) {
 
 // Navbar scroll effect
 const navbar = document.querySelector('.navbar');
+const floatingActions = document.querySelector('.floating-actions');
+const goblin = document.querySelector('.goblin');
 
 if (navbar) {
     window.addEventListener('scroll', () => {
@@ -114,6 +116,87 @@ if (navbar) {
             navbar.classList.remove('scrolled');
         }
     });
+}
+
+if (floatingActions) {
+    const toggleFloating = () => {
+        if (window.scrollY > 200) {
+            floatingActions.classList.add('visible');
+        } else {
+            floatingActions.classList.remove('visible');
+        }
+    };
+
+    window.addEventListener('scroll', toggleFloating);
+    toggleFloating();
+}
+
+// Goblin follow and attack
+if (goblin && !prefersReducedMotion) {
+    let targetX = window.innerWidth - 120;
+    let targetY = window.innerHeight - 140;
+    let currentX = targetX;
+    let currentY = targetY;
+    let facingLeft = false;
+    let lastAttack = 0;
+    const ease = () => (('ontouchstart' in window) ? 0.06 : 0.08);
+
+    const updateGoblin = () => {
+        const speed = ease();
+        currentX += (targetX - currentX) * speed;
+        currentY += (targetY - currentY) * speed;
+        goblin.style.transform = `translate3d(${currentX}px, ${currentY}px, 0) scaleX(${facingLeft ? -1 : 1})`;
+        requestAnimationFrame(updateGoblin);
+    };
+
+    const setTarget = (x, y) => {
+        const maxX = window.innerWidth - goblin.offsetWidth;
+        const maxY = window.innerHeight - goblin.offsetHeight;
+        targetX = Math.min(Math.max(x - 45, 0), maxX);
+        targetY = Math.min(Math.max(y - 70, 0), maxY);
+        facingLeft = x < currentX;
+    };
+
+    window.addEventListener('mousemove', (event) => {
+        setTarget(event.clientX, event.clientY);
+    });
+
+    window.addEventListener('touchstart', (event) => {
+        const touch = event.touches[0];
+        if (!touch) return;
+        setTarget(touch.clientX, touch.clientY);
+    }, { passive: true });
+
+    window.addEventListener('touchmove', (event) => {
+        const touch = event.touches[0];
+        if (!touch) return;
+        setTarget(touch.clientX, touch.clientY);
+    }, { passive: true });
+
+    window.addEventListener('click', () => {
+        const now = Date.now();
+        if (now - lastAttack < 350) return;
+        lastAttack = now;
+        goblin.classList.add('attack');
+        setTimeout(() => goblin.classList.remove('attack'), 350);
+    });
+
+    window.addEventListener('touchend', () => {
+        const now = Date.now();
+        if (now - lastAttack < 350) return;
+        lastAttack = now;
+        goblin.classList.add('attack');
+        setTimeout(() => goblin.classList.remove('attack'), 350);
+    });
+
+    window.addEventListener('resize', () => {
+        const maxX = window.innerWidth - goblin.offsetWidth;
+        const maxY = window.innerHeight - goblin.offsetHeight;
+        targetX = Math.min(Math.max(targetX, 0), maxX);
+        targetY = Math.min(Math.max(targetY, 0), maxY);
+    });
+
+    updateGoblin();
 }
 
 // Smooth scroll for anchor links
