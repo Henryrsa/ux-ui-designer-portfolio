@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mukwevho Livhuwani Henry | UX/UI Designer</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&family=Space+Grotesk:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <canvas id="bgCanvas"></canvas>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <span class="brand-text">LH</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#qualifications">Qualifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="posters.html">Posters</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <main id="main-content">
+    <section id="hero" class="hero-section">
+        <div class="container">
+            <div class="row min-vh-100 align-items-center">
+                <div class="col-lg-7">
+                    <p class="greeting">Hey there! ✨</p>
+                    <h1 class="hero-title">
+                        I'm <span class="highlight">Mukwevho</span><br>
+                        <span class="highlight">Livhuwani Henry</span>
+                    </h1>
+                    <p class="hero-subtitle">
+                        A passionate <span class="typing-text">UX/UI Designer</span> who loves crafting 
+                        digital experiences that make people smile 😊
+                    </p>
+                    <div class="hero-cta">
+                        <a href="#projects" class="btn btn-primary-custom">View My Work</a>
+                        <a href="posters.html" class="btn btn-tertiary-custom">View Posters</a>
+                        <a href="#contact" class="btn btn-secondary-custom">Get In Touch</a>
+                    </div>
+                    <div class="social-links-hero">
+                        <a href="https://github.com/Henryrsa" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/livhuwani-henry-mukwevho-75aba8270/" target="_blank" rel="noopener noreferrer" class="social-link">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="hero-image-wrapper">
+                        <div class="hero-image-glow"></div>
+                        <img src="assests/Myself.png" alt="Mukwevho Livhuwani Henry" class="hero-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <span>Scroll</span>
+            <div class="scroll-arrow"></div>
+        </div>
+    </section>
+
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="about-image-wrapper">
+                        <div class="about-shape"></div>
+                        <div class="about-image-placeholder">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="about-content">
+                        <h2 class="section-title">
+                            <span class="title-number">01</span>
+                            About Me
+                        </h2>
+                        <p class="about-text">
+                            I'm a creative UX/UI designer with a love for making digital spaces feel 
+                            warm and inviting. I believe great design isn't just about how things look—it's 
+                            about how they make people feel.
+                        </p>
+                        <p class="about-text">
+                            When I'm not designing, you'll find me exploring new design trends, 
+                            experimenting with code, or dreaming up creative solutions to everyday problems. 
+                            I'm eager to learn, grow, and contribute to projects that make a difference!
+                        </p>
+                        <div class="about-tags">
+                            <span class="tag">Creative Thinker</span>
+                            <span class="tag">Detail-Oriented</span>
+                            <span class="tag">Passionate</span>
+                            <span class="tag">Team Player</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <h2 class="section-title text-center">
+                <span class="title-number">02</span>
+                My Superpowers 🦸‍♂️
+            </h2>
+            <p class="section-subtitle text-center">Tools & technologies I work with</p>
+            
+            <div class="skills-grid">
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <i class="fab fa-html5"></i>
+                    </div>
+                    <h3>HTML</h3>
+                    <p>Hand-coding with love</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--progress: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <i class="fab fa-css3-alt"></i>
+                    </div>
+                    <h3>CSS</h3>
+                    <p>Styling with creativity</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--progress: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <i class="fab fa-js"></i>
+                    </div>
+                    <h3>JavaScript</h3>
+                    <p>Adding interactivity</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--progress: 75%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <i class="fab fa-bootstrap"></i>
+                    </div>
+                    <h3>Bootstrap</h3>
+                    <p>Responsive layouts</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--progress: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <i class="fab fa-figma"></i>
+                    </div>
+                    <h3>Figma</h3>
+                    <p>UI Design & Prototyping</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--progress: 85%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <i class="fab fa-adobe"></i>
+                    </div>
+                    <h3>Photoshop</h3>
+                    <p>Visual magic ✨</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--progress: 80%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <i class="fas fa-paint-brush"></i>
+                    </div>
+                    <h3>Canva</h3>
+                    <p>Quick & beautiful designs</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--progress: 90%"></div>
+                    </div>
+                </div>
+                
+                <div class="skill-card" data-tilt>
+                    <div class="skill-icon">
+                        <i class="fas fa-bezier-curve"></i>
+                    </div>
+                    <h3>Canvas</h3>
+                        <p>Creative coding</p>
+                    <div class="skill-level">
+                        <div class="skill-progress" style="--progress: 70%"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="qualifications" class="qualifications-section">
+        <div class="container">
+            <h2 class="section-title text-center">
+                <span class="title-number">03</span>
+                Education & Certifications
+            </h2>
+            
+            <div class="qualifications-wrapper">
+                <div class="qualification-card main-education">
+                    <div class="edu-icon">
+                        <i class="fas fa-graduation-cap"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>BSc in Mathematical Science & Computer Science</h3>
+                        <p class="edu-school">University of Limpopo</p>
+                        <p class="edu-period">A solid foundation in logic, problem-solving, and tech</p>
+                    </div>
+                </div>
+                
+                <div class="qualification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>UX/UI Design Certifications</h3>
+                        <p class="edu-school">LinkedIn Learning & More</p>
+                        <p class="edu-period">Continuous learning journey</p>
+                    </div>
+                </div>
+                
+                <div class="qualification-card">
+                    <div class="cert-icon">
+                        <i class="fas fa-award"></i>
+                    </div>
+                    <div class="edu-content">
+                        <h3>Web Development Skills</h3>
+                        <p class="edu-school">Self-taught & Practical Experience</p>
+                        <p class="edu-period">HTML, CSS, JavaScript, Bootstrap</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="projects" class="projects-section">
+        <div class="container">
+            <h2 class="section-title text-center">
+                <span class="title-number">04</span>
+                My Projects
+            </h2>
+            <p class="section-subtitle text-center">Websites, Apps & Projects</p>
+            <div class="project-highlights">
+                <div class="highlight-card">
+                    <i class="fas fa-sitemap"></i>
+                    <span>UX flow + information architecture</span>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-mobile-alt"></i>
+                    <span>Responsive, mobile-first layouts</span>
+                </div>
+                <div class="highlight-card">
+                    <i class="fas fa-wand-magic-sparkles"></i>
+                    <span>Visual polish + brand consistency</span>
+                </div>
+            </div>
+            
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);">
+                            <i class="fas fa-briefcase"></i>
+                            <span>applier-main</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Applier Main</h3>
+                        <p>Job application platform built with JavaScript</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Web App</span>
+                        </div>
+                        <a href="https://applier-main.vercel.app" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                        <a href="https://github.com/Henryrsa/applier-main" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #11998e 0%, #38ef7d 100%);">
+                            <i class="fas fa-language"></i>
+                            <span>Flashcards</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Flashcards Generation</h3>
+                        <p>Language learning flashcard & quiz system</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>Education</span>
+                        </div>
+                        <a href="https://github.com/Henryrsa/Flashcards_generation" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);">
+                            <i class="fas fa-wrench"></i>
+                            <span>mech-finder</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Mech Finder</h3>
+                        <p>Find mechanics & repair services</p>
+                        <div class="project-tags">
+                            <span>JavaScript</span>
+                            <span>Service</span>
+                        </div>
+                        <a href="https://github.com/Henryrsa/mech-finder" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #4facfe 0%, #00f2fe 100%);">
+                            <i class="fas fa-coffee"></i>
+                            <span>champbucks</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Champbucks Tech</h3>
+                        <p>IT services business website with services, pricing & contact form</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>Web</span>
+                        </div>
+                        <a href="https://henryrsa.github.io/champbucks-tech/" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                        <a href="https://github.com/Henryrsa/champbucks-tech" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #fa709a 0%, #fee140 100%);">
+                            <i class="fas fa-rocket"></i>
+                            <span>goshaw</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Goshaw</h3>
+                        <p>Project website built with HTML</p>
+                        <div class="project-tags">
+                            <span>HTML</span>
+                            <span>Web</span>
+                        </div>
+                        <a href="https://henryrsa.github.io/goshaw/" target="_blank" rel="noopener noreferrer" class="project-link">View Live</a>
+                        <a href="https://github.com/Henryrsa/goshaw" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+                
+                <div class="project-card">
+                    <div class="project-image">
+                        <div class="project-placeholder" style="background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);">
+                            <i class="fas fa-mobile"></i>
+                            <span>applierapp</span>
+                        </div>
+                    </div>
+                    <div class="project-info">
+                        <h3>Applier App</h3>
+                        <p>Mobile application built with Dart/Flutter</p>
+                        <div class="project-tags">
+                            <span>Dart</span>
+                            <span>Flutter</span>
+                            <span>Mobile</span>
+                        </div>
+                        <a href="https://github.com/Henryrsa/applierapp" target="_blank" rel="noopener noreferrer" class="project-link">GitHub</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <h2 class="section-title text-center">
+                <span class="title-number">05</span>
+                Let's Connect! 📬
+            </h2>
+            
+            <div class="contact-wrapper">
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-phone"></i>
+                    </div>
+                    <h3>Phone</h3>
+                    <p><a href="https://wa.me/27765807777" target="_blank" rel="noopener noreferrer">WhatsApp: 076 580 7777</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Email</h3>
+                    <p><a href="mailto:Mukwevhohenry@gmail.com">Mukwevhohenry@gmail.com</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-github"></i>
+                    </div>
+                    <h3>GitHub</h3>
+                    <p><a href="https://github.com/Henryrsa" target="_blank" rel="noopener noreferrer">@Henryrsa</a></p>
+                </div>
+                
+                <div class="contact-card">
+                    <div class="contact-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </div>
+                    <h3>LinkedIn</h3>
+                    <p><a href="https://www.linkedin.com/in/livhuwani-henry-mukwevho-75aba8270/" target="_blank" rel="noopener noreferrer">Livhuwani Henry</a></p>
+                </div>
+            </div>
+            
+            <div class="contact-cta text-center">
+                <p>Have a project in mind? Let's create something amazing together!</p>
+                <a href="mailto:Mukwevhohenry@gmail.com" class="btn btn-primary-custom">Say Hello 👋</a>
+            </div>
+        </div>
+    </section>
+
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <span class="brand-text">LH</span>
+                    <p>Designed with 💜 by Mukwevho</p>
+                </div>
+                <div class="footer-social">
+                    <a href="https://github.com/Henryrsa" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i></a>
+                    <a href="https://www.linkedin.com/in/livhuwani-henry-mukwevho-75aba8270/" target="_blank" rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                    <a href="mailto:Mukwevhohenry@gmail.com"><i class="fas fa-envelope"></i></a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>© 2024 Mukwevho Livhuwani Henry. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

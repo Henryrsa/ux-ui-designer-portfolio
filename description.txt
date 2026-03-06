@@ -1,0 +1,71 @@
+Job Description
+We are looking for a talented and motivated UX / UI Designer to join our Graduate Program. This is an exciting opportunity for a recent graduate with a strong eye for design and a passion for user experience to build a career in the digital space, particularly in a fast-paced online industry. 
+
+This is an excellent opportunity for a recent graduate to build their portfolio, gain real-world experience, and develop a career in visual design. You’ll be working on a wide variety of projects that support the company’s branding, marketing, and digital content efforts. 
+
+The ideal candidate should have a solid understanding of design principles, be comfortable designing across web and mobile interfaces, and be able to hand-code HTML.  
+
+You must also be confident working with and editing HTML in environments such as marketing emails and responsive layouts. 
+
+Key Requirements: 
+
+Degree or diploma in UX/UI Design, Web Design, or a related field 
+Strong portfolio showcasing UX thinking and visual design skills 
+Working knowledge of HTML (hand-coding) and ability to manipulate email templates 
+Basic understanding of responsive design, CSS, and cross-browser compatibility 
+Eagerness to learn, adapt, and contribute to a collaborative team environment 
+This role is ideal for a creative thinker with technical capabilities, looking to grow under the guidance of a senior design team. 
+
+ 
+
+ 
+
+Key Responsibilities 
+
+Assist in the creation of visual assets for web, social media, print, and marketing campaigns. 
+Work with senior designers and marketers to develop and refine creative concepts. 
+Help maintain brand consistency across all visual communications. 
+Support layout and design of internal documents, presentations, and reports. 
+Contribute to brainstorming sessions and creative planning. 
+Prepare final artwork for digital and print production. 
+Stay updated on design trends and industry best practices. 
+ 
+
+Essential Skills & Requirements 
+
+A degree in Graphic Design, Visual Communication, or a related field. 
+A strong portfolio showcasing design skills and creative thinking. 
+Proficiency in Adobe Creative Suite (Illustrator, Photoshop, InDesign); familiarity with Figma or Canva is a plus. 
+Strong attention to detail, layout, and typography. 
+Good communication skills and ability to take feedback constructively. 
+Ability to manage multiple tasks and meet deadlines in a fast-paced environment. 
+ 
+
+What We Offer 
+
+Mentorship and training from experienced designers. 
+Opportunities to work on real-world projects across various media. 
+A collaborative and inclusive work culture. 
+Competitive graduate salary and flexible working options. 
+
+
+github link https://github.com/Henryrsa
+
+linkedin link https://www.linkedin.com/in/livhuwani-henry-mukwevho-75aba8270/
+
+===============================================
+       MY LIVE PROJECT LINKS
+      
+===============================================
+
+🔹 PROJECT 1: Champbucks Tech
+   URL: https://henryrsa.github.io/champbucks-tech/
+   
+   Description: IT services business website
+   Features: Services, pricing, contact form, animations
+
+
+🔹 PROJECT 2: Goshaw
+   URL: https://henryrsa.github.io/goshaw/
+   
+   Description: Project website
