@@ -240,7 +240,7 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Scroll reveal animation
-const revealElements = document.querySelectorAll('.skill-card, .qualification-card, .project-card, .contact-card, .poster-card');
+const revealElements = document.querySelectorAll('.skill-card, .qualification-card, .experience-card, .project-card, .contact-card, .poster-card');
 
 const revealOnScroll = () => {
     const windowHeight = window.innerHeight;

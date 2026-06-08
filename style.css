@@ -675,6 +675,122 @@ section {
     font-size: 0.9375rem;
 }
 
+/* Experience Section */
+.experience-section {
+    background: linear-gradient(135deg, #f8f9fa 0%, #fff5f8 100%);
+}
+
+.experience-wrapper {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.experience-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 20px;
+    display: flex;
+    gap: 1.5rem;
+    box-shadow: var(--shadow);
+    transition: all 0.3s ease;
+    border-left: 4px solid var(--primary);
+}
+
+.experience-card:hover {
+    transform: translateX(10px);
+    box-shadow: var(--shadow-hover);
+}
+
+.exp-icon {
+    width: 60px;
+    height: 60px;
+    min-width: 60px;
+    background: var(--gradient-1);
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.exp-icon i {
+    font-size: 1.5rem;
+    color: white;
+}
+
+.exp-content {
+    flex: 1;
+}
+
+.exp-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 0.25rem;
+}
+
+.exp-header h3 {
+    font-family: var(--font-heading);
+    font-size: 1.25rem;
+    font-weight: 600;
+}
+
+.exp-date {
+    font-size: 0.875rem;
+    color: var(--primary);
+    font-weight: 600;
+    background: rgba(255, 107, 157, 0.1);
+    padding: 0.25rem 0.75rem;
+    border-radius: 20px;
+}
+
+.exp-company {
+    color: var(--secondary);
+    font-weight: 500;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+}
+
+.exp-duties {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 1rem;
+}
+
+.exp-duties li {
+    position: relative;
+    padding-left: 1.25rem;
+    margin-bottom: 0.4rem;
+    color: var(--text-light);
+    font-size: 0.9375rem;
+}
+
+.exp-duties li::before {
+    content: '▸';
+    position: absolute;
+    left: 0;
+    color: var(--primary);
+}
+
+.exp-tags {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.exp-tags span {
+    padding: 0.25rem 0.75rem;
+    border-radius: 999px;
+    background: rgba(126, 232, 250, 0.2);
+    color: var(--text);
+    font-size: 0.75rem;
+    font-weight: 600;
+}
+
 /* Projects Section */
 .projects-section {
     background: linear-gradient(135deg, #fff5f8 0%, #f0f9ff 100%);
@@ -1322,6 +1438,28 @@ section {
     .qualification-card .edu-icon,
     .qualification-card .cert-icon {
         margin: 0 auto;
+    }
+
+    .experience-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .exp-icon {
+        margin: 0 auto;
+    }
+
+    .exp-header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .exp-duties li {
+        text-align: left;
+    }
+
+    .exp-tags {
+        justify-content: center;
     }
 
     .project-highlights {
