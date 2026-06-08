@@ -276,7 +276,7 @@ document.querySelectorAll('.project-card').forEach((card, index) => {
 
 // Typing effect for hero subtitle
 const typingText = document.querySelector('.typing-text');
-const phrases = ['UX/UI Designer', 'Creative Thinker', 'Web Developer', 'Visual Storyteller'];
+const phrases = ['UX/UI Designer', 'Creative Thinker', 'Web Developer', 'Visual Storyteller', 'IT Support'];
 let phraseIndex = 0;
 let charIndex = 0;
 let isDeleting = false;
